@@ -176,12 +176,14 @@ body.light-mode .toggle-handle {
    HERO SECTION
 ======================================= */
 .hero {
-    display: flex;
+     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: var(--space-xl);
-    padding: var(--space-xl) 0;
-    min-height: 80vh;
+    padding: var(--space-xl) 5%;
+    min-height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .hero-text {
@@ -191,6 +193,7 @@ body.light-mode .toggle-handle {
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: var(--space-md);
+    line-height: 1.2;
 }
 
 .hero-text p {
