@@ -1,0 +1,434 @@
+/* =======================================
+   ROOT VARIABLES
+======================================= */
+:root {
+    --background: #0d0d0d;
+    --background-light: #ffffff;
+    --text: #ffffff;
+    --text-light: #111111;
+    --text-dim: #bbbbbb;
+    --accent: #2dd4ff;
+    --accent-glow: rgba(45, 212, 255, 0.6);
+    --card-bg: #1a1a1a;
+    --card-bg-light: #f7f7f7;
+    --border: #222222;
+    --border-light: #dddddd;
+
+    --space-xs: 6px;
+    --space-sm: 12px;
+    --space-md: 24px;
+    --space-lg: 48px;
+    --space-xl: 80px;
+
+    --radius: 10px;
+    --transition: 0.25s ease;
+}
+
+/* =======================================
+   GLOBAL RESET
+======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background var(--transition), color var(--transition);
+}
+
+/* LIGHT MODE */
+body.light-mode {
+    background: var(--background-light);
+    color: var(--text-light);
+}
+
+
+/* =======================================
+   CONTAINERS & SECTIONS
+======================================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section-angled {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.0));
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+body.light-mode .section-angled {
+    background: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0.0));
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.section-title {
+    margin-bottom: var(--space-lg);
+}
+
+.section-title.text-center {
+    text-align: center;
+}
+
+.section-title h1,
+.section-title h2 {
+    margin-bottom: var(--space-sm);
+}
+
+/* =======================================
+   NAVIGATION
+======================================= */
+nav {
+    width: 100%;
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+body.light-mode nav {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: var(--space-md);
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+}
+
+body.light-mode nav a {
+    color: var(--text-light);
+}
+
+body.light-mode nav a:hover {
+    color: var(--accent);
+}
+
+/* =======================================
+   THEME TOGGLE SWITCH
+======================================= */
+.theme-toggle {
+    width: 48px;
+    height: 24px;
+    border-radius: 20px;
+    background: #333;
+    position: relative;
+    cursor: pointer;
+}
+
+body.light-mode .theme-toggle {
+    background: #ccc;
+}
+
+.toggle-handle {
+    width: 20px;
+    height: 20px;
+    background: var(--text);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: var(--transition);
+}
+
+body.light-mode .toggle-handle {
+    left: 26px;
+}
+
+/* =======================================
+   HERO SECTION
+======================================= */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+    padding: var(--space-xl) 0;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+.hero-text p {
+    margin-bottom: var(--space-lg);
+}
+
+.hero-visual img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius);
+}
+
+/* =======================================
+   CTA BUTTONS
+======================================= */
+.btn {
+    padding: 12px 22px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.btn.glow {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.btn.glow:hover {
+    box-shadow: 0 0 20px var(--accent);
+}
+
+.btn.enquiry-btn {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn.enquiry-btn:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+/* CTA block layout */
+.cta-block {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+/* =======================================
+   CARDS & GRIDS
+======================================= */
+.card-sharp {
+    background: var(--card-bg);
+    padding: var(--space-md);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.card-sharp:hover {
+    border-color: var(--accent);
+}
+
+body.light-mode .card-sharp {
+    background: var(--card-bg-light);
+    border: 1px solid var(--border-light);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+/* Pricing card styles */
+.pricing-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-lg) var(--space-md);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.pricing-card:hover {
+    border-color: var(--accent);
+}
+
+body.light-mode .pricing-card {
+    background: var(--card-bg-light);
+    border-color: var(--border-light);
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    margin: var(--space-sm) 0;
+}
+
+.pricing-benefits {
+    list-style: none;
+    margin: var(--space-md) 0;
+}
+
+.pricing-benefits li {
+    margin-bottom: var(--space-xs);
+}
+
+.badge-highlight {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--accent);
+    color: #000;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+}
+
+/* Workflow */
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+.workflow-step {
+    text-align: center;
+}
+
+.workflow-step svg {
+    margin-bottom: var(--space-sm);
+}
+
+/* Testimonials */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    padding: var(--space-md);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.testimonial-stars {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: var(--space-sm);
+}
+
+.testimonial-author {
+    margin-top: var(--space-sm);
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* Payment options */
+.payment-options {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+}
+
+.payment-card {
+    padding: var(--space-md);
+    border-radius: var(--radius);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    width: 150px;
+}
+
+.payment-card img {
+    margin-bottom: var(--space-sm);
+}
+
+/* =======================================
+   ABOUT WRAPPER (split section)
+======================================= */
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+footer {
+    padding: var(--space-xl) 0;
+    border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* =======================================
+   FLOATING CTAs
+======================================= */
+.floating-cta-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    z-index: 999;
+}
+
+.floating-cta {
+    text-decoration: none;
+    padding: 10px 16px;
+    background: var(--accent);
+    color: #000;
+    border-radius: var(--radius);
+    font-weight: 700;
+    box-shadow: 0 0 12px var(--accent-glow);
+    transition: var(--transition);
+}
+
+/* =======================================
+   ANIMATIONS
+======================================= */
+.fade-in {
+    animation: fadeIn 0.9s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {

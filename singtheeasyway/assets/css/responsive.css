@@ -1,0 +1,104 @@
+/* =======================================
+   RESPONSIVE STYLES
+======================================= */
+
+/* =======================================
+   TABLETS (max-width: 1024px)
+======================================= */
+@media (max-width: 1024px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .workflow-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .payment-options {
+        flex-wrap: wrap;
+    }
+}
+
+/* =======================================
+   MOBILE (max-width: 768px)
+======================================= */
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none; /* You can add a mobile menu later if needed */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .floating-cta-container {
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+/* =======================================
+   MOBILE SMALL (max-width: 480px)
+======================================= */
+@media (max-width: 480px) {
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 10px 16px;
+    }
+
+    .pricing-card .price {
+        font-size: 1.6rem;
+    }
+
+    .payment-card {
+        width: 100%;
+    }
+}
