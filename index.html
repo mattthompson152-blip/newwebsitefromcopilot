@@ -37,8 +37,8 @@
         <p class="sub-text">Now teaching exclusively online from my mobile studio.</p>
         
         <div class="cta-block">
-            <button class="btn primary">Book Your £25 Consultation</button>
-            <button class="btn secondary">View Pricing</button>
+            <button class="btn primary" onclick="widget.open();">Book Your £25 Consultation</button>
+            <a href="pricing.html" class="btn secondary">View Pricing</a>
         </div>
         
         <p class="enquiry-link">Have a question? <a href="contact.html">Send an enquiry</a></p>
@@ -135,7 +135,7 @@
                     <li>Goal discussion</li>
                     <li>Technique overview</li>
                 </ul>
-                <button class="btn primary">Book Consultation</button>
+                <button class="btn primary" onclick="widget.open();">Book Consultation</button>
             </div>
             <div class="pricing-card">
                 <h3>Single Lesson</h3>
@@ -144,7 +144,7 @@
                     <li>One-to-one online session</li>
                     <li>Personalised technique work</li>
                 </ul>
-                <button class="btn primary">Book Single Lesson</button>
+                <button class="btn primary" onclick="widget.open();">Book Single Lesson</button>
             </div>
             <div class="pricing-card">
                 <span class="badge save">Save £200</span>
@@ -155,8 +155,20 @@
                     <li>Custom long-term plan</li>
                     <li>Email support</li>
                 </ul>
-                <button class="btn primary">Book 10-Lesson Block</button>
+                <button class="btn primary" onclick="widget.open();">Book 10-Lesson Block</button>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-angled fade-in">
+    <div class="container text-center">
+        <span class="badge">Ready to Start?</span>
+        <h2>Begin Your Vocal Journey Today</h2>
+        <p>Book your consultation and start improving your voice.</p>
+        <div class="cta-block">
+            <button class="btn primary" onclick="widget.open();">Book Your Consultation</button>
+            <a href="contact.html" class="btn secondary">Send an Enquiry</a>
         </div>
     </div>
 </section>
@@ -188,16 +200,22 @@
                 <h3>Contact</h3>
                 <p><strong>Mobile:</strong> </p>
                 <p><strong>Email:</strong> </p>
-                <button class="btn secondary">Send Enquiry</button>
+                <a href="contact.html" class="btn secondary">Send Enquiry</a>
             </div>
         </div>
     </div>
 </footer>
 
 <div class="floating-cta">
-    <a href="#book" class="btn primary">Book Lesson</a>
-    <a href="#enquire" class="btn secondary">Enquire</a>
+    <button class="btn primary" onclick="widget.open();">Book Lesson</button>
+    <a href="contact.html" class="btn secondary">Enquire</a>
 </div>
+
+<!-- SimplyBook.me Widget -->
+<script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/singtheeasyway.simplybook.me","theme":"default","theme_settings":{"timeline_hide_unavailable":"1","hide_past_days":"0","timeline_show_end_time":"0","timeline_modern_display":"as_slots","sb_base_color":"#dd3649","display_item_mode":"block","booking_nav_bg_color":"#dd3649","body_bg_color":"#f2f2f2","sb_review_image":"12","sb_review_image_preview":"\/uploads\/singtheeasyway\/image_files\/preview\/736b781edc1d1a51acf11fcb492cf177.jpeg","dark_font_color":"#474747","light_font_color":"#f5fcff","btn_color_1":"#dd3649","sb_company_label_color":"#552f34","hide_img_mode":"1","show_sidebar":"1","sb_busy":"#c7b3b3","sb_available":"#d6ebff"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]}});
+</script>
 
 <script src="assets/js/theme-toggle.js"></script>
 <script src="assets/js/cta.js"></script>
