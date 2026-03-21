@@ -32,38 +32,79 @@
     <div class="hero-bg"></div>
     <div class="page-header-content">
         <h1>Get in Touch</h1>
-        <p>Have a question? I'd love to hear from you.</p>
+        <p>Book a lesson or send an enquiry.</p>
     </div>
 </header>
 
 <main class="page-content">
     <div class="container">
         
+        <div class="pricing-grid" style="margin-bottom: var(--space-xl);">
+            <div class="pricing-card">
+                <span class="badge">£25 Consultation</span>
+                <h3>30-Minute Assessment</h3>
+                <p class="price">£25</p>
+                <ul>
+                    <li>Vocal assessment</li>
+                    <li>Goal discussion</li>
+                    <li>Technique overview</li>
+                </ul>
+                <button class="btn primary book-btn">Book Consultation</button>
+            </div>
+            <div class="pricing-card">
+                <span class="badge" style="visibility: hidden;">Single</span>
+                <h3>Single Lesson</h3>
+                <p class="price">£65</p>
+                <ul>
+                    <li>One-to-one online session</li>
+                    <li>Personalised technique work</li>
+                </ul>
+                <button class="btn primary book-btn">Book Single Lesson</button>
+            </div>
+            <div class="pricing-card">
+                <span class="badge save">Save £200</span>
+                <h3>10-Lesson Block</h3>
+                <p class="price">£600</p>
+                <ul>
+                    <li>Ten 1-hour sessions</li>
+                    <li>Custom long-term plan</li>
+                    <li>Email support</li>
+                </ul>
+                <button class="btn primary book-btn">Book 10-Lesson Block</button>
+            </div>
+        </div>
+        
         <div class="contact-grid">
             <div>
                 <h2>Contact Information</h2>
-                <p>Ready to start your vocal journey? Get in touch using the details below or send an enquiry.</p>
+                <p>Ready to start your vocal journey? Get in touch using the details below.</p>
                 
                 <div class="card-sharp" style="margin-top: var(--space-lg); padding: var(--space-lg);">
                     <p><strong>Email:</strong> matt@singtheeasyway.com</p>
                     <p style="margin-top: var(--space-sm);"><strong>Location:</strong> Online Worldwide</p>
                     <p style="margin-top: var(--space-sm);"><strong>Lessons via:</strong> FaceTime, WhatsApp, Microsoft Teams</p>
                 </div>
-                
-                <div class="cta-block" style="margin-top: var(--space-lg);">
-                    <button class="btn primary" id="bookBtn">Book Online Now</button>
-                </div>
             </div>
             
             <div>
                 <h2>Send an Enquiry</h2>
-                <p>Fill out the form and I'll get back to you as soon as possible.</p>
+                <p>Have a question? Send me a message and I'll get back to you within 24 hours.</p>
                 
                 <div class="cta-block" style="margin-top: var(--space-lg);">
-                    <button class="btn secondary" id="enquiryBtn">Open Enquiry Form</button>
+                    <button class="btn secondary enquiry-btn">Open Enquiry Form</button>
                 </div>
-                
-                <p style="margin-top: var(--space-md); color: var(--text-secondary); font-size: 0.9rem;">The enquiry form will open in a popup window.</p>
+            </div>
+        </div>
+        
+        <div class="payment-methods" style="margin-top: var(--space-xl);">
+            <p class="payment-label">Secure payment options</p>
+            <div class="payment-logos">
+                <img src="assets/images/payment-visa.svg" alt="Visa">
+                <img src="assets/images/payment-mastercard.svg" alt="Mastercard">
+                <img src="assets/images/payment-amex.svg" alt="American Express">
+                <img src="assets/images/payment-applepay.svg" alt="Apple Pay">
+                <img src="assets/images/payment-googlepay.svg" alt="Google Pay">
+                <img src="assets/images/payment-paypal.svg" alt="PayPal">
             </div>
         </div>
         
@@ -105,7 +146,7 @@
                 <h3>Contact</h3>
                 <p><strong>Mobile:</strong> </p>
                 <p><strong>Email:</strong> </p>
-                <button class="btn secondary" id="footerEnquiryBtn">Send Enquiry</button>
+                <button class="btn secondary enquiry-btn">Send Enquiry</button>
             </div>
         </div>
     </div>
@@ -148,10 +189,6 @@
             "predefined": []
         }
     });
-    
-    document.getElementById('bookBtn').addEventListener('click', function() {
-        widget.open();
-    });
 </script>
 
 <!-- JotForm Lightbox -->
@@ -170,21 +207,27 @@
             openOnLoad: false
         });
         
-        document.getElementById('enquiryBtn').addEventListener('click', function() {
-            jotformFeedback.open();
+        // All booking buttons
+        document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
+            if(btn) {
+                btn.addEventListener('click', function() {
+                    widget.open();
+                });
+            }
         });
         
-        document.getElementById('footerEnquiryBtn').addEventListener('click', function() {
-            jotformFeedback.open();
-        });
-        
-        document.getElementById('floatEnquiryBtn').addEventListener('click', function() {
-            jotformFeedback.open();
+        // All enquiry buttons
+        document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
+            if(btn) {
+                btn.addEventListener('click', function() {
+                    jotformFeedback.open();
+                });
+            }
         });
     });
 </script>
 
-<script src="assets/js/theme-toggle.js"></script>
+<script src="assets/js/theme-theme.js"></script>
 <script src="assets/js/cta.js"></script>
 <script src="assets/js/main.js"></script>
 
