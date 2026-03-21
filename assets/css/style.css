@@ -1,487 +1,122 @@
-/* =======================================
-   ROOT VARIABLES
-======================================= */
-:root {
-    --background: #0d0d0d;
-    --background-light: #ffffff;
-    --text: #ffffff;
-    --text-light: #111111;
-    --text-dim: #bbbbbb;
-    --accent: #2dd4ff;
-    --accent-glow: rgba(45, 212, 255, 0.6);
-    --card-bg: #1a1a1a;
-    --card-bg-light: #f7f7f7;
-    --border: #222222;
-    --border-light: #dddddd;
-
-    --space-xs: 6px;
-    --space-sm: 12px;
-    --space-md: 24px;
-    --space-lg: 48px;
-    --space-xl: 80px;
-
-    --radius: 10px;
-    --transition: 0.25s ease;
-}
-
-/* =======================================
-   GLOBAL RESET
-======================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: Inter, sans-serif;
-    background: var(--background);
-    color: var(--text);
-    line-height: 1.6;
-    transition: background var(--transition), color var(--transition);
-}
-
-/* LIGHT MODE */
-body.light-mode {
-    background: var(--background-light);
-    color: var(--text-light);
-}
-
-
-/* =======================================
-   CONTAINERS & SECTIONS
-======================================= */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section {
-    padding: var(--space-xl) 0;
-}
-
-.section-angled {
-    padding: var(--space-xl) 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.0));
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-
-body.light-mode .section-angled {
-    background: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0.0));
-    border-top: 1px solid var(--border-light);
-    border-bottom: 1px solid var(--border-light);
-}
-
-.section-title {
-    margin-bottom: var(--space-lg);
-}
-
-.section-title.text-center {
-    text-align: center;
-}
-
-.section-title h1,
-.section-title h2 {
-    margin-bottom: var(--space-sm);
-}
-
-/* =======================================
-   NAVIGATION
-======================================= */
-nav {
-    width: 100%;
-    padding: var(--space-md) 0;
-    border-bottom: 1px solid var(--border);
-}
-
-body.light-mode nav {
-    border-bottom: 1px solid var(--border-light);
-}
-
-.nav-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-    gap: var(--space-md);
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav a {
-    color: var(--text);
-    text-decoration: none;
-    transition: color var(--transition);
-}
-
-nav a:hover,
-nav a.active {
-    color: var(--accent);
-}
-
-body.light-mode nav a {
-    color: var(--text-light);
-}
-
-body.light-mode nav a:hover {
-    color: var(--accent);
-}
-
-/* =======================================
-   THEME TOGGLE SWITCH
-======================================= */
-.theme-toggle {
-    width: 48px;
-    height: 24px;
-    border-radius: 20px;
-    background: #333;
-    position: relative;
-    cursor: pointer;
-}
-
-body.light-mode .theme-toggle {
-    background: #ccc;
-}
-
-.toggle-handle {
-    width: 20px;
-    height: 20px;
-    background: var(--text);
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: var(--transition);
-}
-
-body.light-mode .toggle-handle {
-    left: 26px;
-}
-
-/* =======================================
-   HERO SECTION
-======================================= */
-.hero {
-     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--space-xl);
-    padding: var(--space-xl) 5%;
-    min-height: auto;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: var(--space-md);
-    line-height: 1.2;
-}
-
-.hero-text p {
-    margin-bottom: var(--space-lg);
-}
-
-/* MISSING: img-banner styling */
-.img-banner {
-    width: 100%;
-    max-width: 500px;
-    border-radius: var(--radius);
-    object-fit: cover;
-}
-
-/* =======================================
-   CTA BUTTONS
-======================================= */
-.btn {
-    padding: 12px 22px;
-    border-radius: var(--radius);
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-    font-weight: 600;
-}
-
-.btn.glow {
-    background: var(--accent);
-    color: #000;
-    box-shadow: 0 0 10px var(--accent-glow);
-}
-
-.btn.glow:hover {
-    box-shadow: 0 0 20px var(--accent);
-}
-
-.btn.enquiry-btn {
-    background: transparent;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-}
-
-.btn.enquiry-btn:hover {
-    background: var(--accent);
-    color: #000;
-}
-
-/* CTA block layout */
-.cta-block {
-    display: flex;
-    gap: var(--space-sm);
-    flex-wrap: wrap;
-}
-
-/* =======================================
-   CARDS & GRIDS
-======================================= */
-.card-sharp {
-    background: var(--card-bg);
-    padding: var(--space-md);
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    transition: var(--transition);
-}
-
-.card-sharp:hover {
-    border-color: var(--accent);
-}
-
-body.light-mode .card-sharp {
-    background: var(--card-bg-light);
-    border: 1px solid var(--border-light);
-}
-
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
-}
-
-/* MISSING: pricing-grid layout */
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-}
-
-/* Pricing card styles */
-.pricing-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: var(--space-lg) var(--space-md);
-    text-align: center;
-    transition: var(--transition);
-}
-
-.pricing-card:hover {
-    border-color: var(--accent);
-}
-
-body.light-mode .pricing-card {
-    background: var(--card-bg-light);
-    border-color: var(--border-light);
-}
-
-.pricing-card .price {
-    font-size: 2rem;
-    margin: var(--space-sm) 0;
-}
-
-.pricing-benefits {
-    list-style: none;
-    margin: var(--space-md) 0;
-}
-
-.pricing-benefits li {
-    margin-bottom: var(--space-xs);
-}
-
-.badge-highlight {
-    display: inline-block;
-    padding: 4px 10px;
-    background: var(--accent);
-    color: #000;
-    border-radius: 4px;
-    font-weight: 700;
-    margin-bottom: var(--space-sm);
-}
-
-/* Workflow */
-.workflow-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-md);
-}
-
-.workflow-step {
-    text-align: center;
-}
-
-.workflow-step svg {
-    margin-bottom: var(--space-sm);
-}
-
-/* Testimonials */
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
-}
-
-.testimonial-card {
-    background: var(--card-bg);
-    padding: var(--space-md);
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-}
-
-.testimonial-stars {
-    color: var(--accent);
-    font-size: 1.3rem;
-    margin-bottom: var(--space-sm);
-}
-
-.testimonial-author {
-    margin-top: var(--space-sm);
-    font-weight: 600;
-    color: var(--accent);
-}
-
-/* Payment options */
-.payment-options {
-    display: flex;
-    gap: var(--space-md);
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.payment-card {
-    padding: var(--space-md);
-    border-radius: var(--radius);
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    width: 150px;
-}
-
-.payment-card img {
-    margin-bottom: var(--space-sm);
-}
-
-/* =======================================
-   ABOUT WRAPPER (split section)
-======================================= */
-.about-wrapper {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xl);
-}
-
-/* =======================================
-   FOOTER
-======================================= */
-footer {
-    padding: var(--space-xl) 0;
-    border-top: 1px solid var(--border);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-}
-
-.footer-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-footer ul {
-    list-style: none;
-}
-
-footer a {
-    color: var(--text);
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: var(--accent);
-}
-
-body.light-mode footer a {
-    color: var(--text-light);
-}
-
-/* =======================================
-   FLOATING CTAs
-======================================= */
-.floating-cta-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-    z-index: 999;
-}
-
-.floating-cta-container a {
-    text-decoration: none;
-    padding: 10px 16px;
-    background: var(--accent);
-    color: #000;
-    border-radius: var(--radius);
-    font-weight: 700;
-    box-shadow: 0 0 12px var(--accent-glow);
-    transition: var(--transition);
-}
-
-.floating-cta-container a:hover {
-    box-shadow: 0 0 20px var(--accent);
-}
-
-/* =======================================
-   ANIMATIONS
-======================================= */
-.fade-in {
-    animation: fadeIn 0.9s ease forwards;
-    opacity: 0;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =======================================
-   UTILITIES
-======================================= */
-.text-center {
-    text-align: center;
-}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Sing The Easy Way</title>
+    <meta name="description" content="Get in touch with Matt Thompson. Book a consultation or send an enquiry about online singing lessons." />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="dark-mode">
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">Sing The Easy Way</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Matt</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="theme-toggle" class="theme-toggle">
+            <div class="toggle-handle"></div>
+        </div>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="hero-bg"></div>
+    <div class="page-header-content">
+        <h1>Get in Touch</h1>
+        <p>Have a question? I'd love to hear from you.</p>
+    </div>
+</header>
+
+<main class="page-content">
+    <div class="container">
+        
+        <div class="contact-grid">
+            <div>
+                <h2>Contact Information</h2>
+                <p>Ready to start your vocal journey? Get in touch using the details below or send an enquiry.</p>
+                
+                <div class="card-sharp" style="margin-top: var(--space-lg); padding: var(--space-lg);">
+                    <p><strong>Email:</strong> matt@singtheeasyway.com</p>
+                    <p style="margin-top: var(--space-sm);"><strong>Location:</strong> Online Worldwide</p>
+                    <p style="margin-top: var(--space-sm);"><strong>Lessons via:</strong> FaceTime, WhatsApp, Microsoft Teams</p>
+                </div>
+                
+                <div class="cta-block" style="margin-top: var(--space-lg);">
+                    <button class="btn primary">Book Online Now</button>
+                </div>
+            </div>
+            
+            <div>
+                <h2>Send an Enquiry</h2>
+                <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+                
+                <div class="card-sharp" style="margin-top: var(--space-lg); padding: var(--space-lg);">
+                    <p style="color:var(--text-secondary);"><em>Enquiry form placeholder — connect your form service here</em></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+<section class="section-angled fade-in">
+    <div class="container text-center">
+        <span class="badge">Quick Response</span>
+        <h2>I'll Reply Within 24 Hours</h2>
+        <p>All enquiries are answered personally.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">Sing The Easy Way</div>
+                <p>Online singing lessons for all levels, worldwide.</p>
+                <div class="socials">
+                    <span>IG</span>
+                    <span>TT</span>
+                    <span>YT</span>
+                </div>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Matt</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p><strong>Mobile:</strong> </p>
+                <p><strong>Email:</strong> </p>
+                <button class="btn secondary">Send Enquiry</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="floating-cta">
+    <a href="#book" class="btn primary">Book Lesson</a>
+    <a href="#enquire" class="btn secondary">Enquire</a>
+</div>
+
+<script src="assets/js/theme-toggle.js"></script>
+<script src="assets/js/cta.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
