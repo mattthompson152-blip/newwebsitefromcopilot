@@ -398,6 +398,8 @@ nav a:hover {
     padding: var(--space-lg) var(--space-md);
     text-align: center;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-card:hover {
@@ -405,8 +407,17 @@ nav a:hover {
     transform: translateY(-4px);
 }
 
+/* FIXED: Badge styling now consistent for all cards */
 .pricing-card .badge {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    background: rgba(255, 107, 53, 0.2);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
     margin-bottom: var(--space-sm);
+    align-self: center;
 }
 
 .pricing-card .badge.save {
@@ -431,12 +442,18 @@ nav a:hover {
 .pricing-card ul {
     list-style: none;
     margin: var(--space-md) 0;
+    flex-grow: 1;
 }
 
 .pricing-card li {
     color: var(--text-secondary);
     padding: var(--space-xs) 0;
     font-size: 0.9rem;
+}
+
+/* Ensure buttons align at bottom */
+.pricing-card .btn {
+    margin-top: auto;
 }
 
 /* =======================================
@@ -661,4 +678,23 @@ footer a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
+}
+
+/* =======================================
+   SECTION ANGLED (CTA Sections)
+======================================= */
+.section-angled {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    position: relative;
+}
+
+.section-angled::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
 }
