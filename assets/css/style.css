@@ -40,9 +40,6 @@ body {
     line-height: 1.6;
 }
 
-/* =======================================
-   CONTAINERS
-======================================= */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -614,4 +611,54 @@ footer a:hover {
 ======================================= */
 .text-center {
     text-align: center;
+}
+
+.card-sharp {
+    background: var(--bg-card);
+    padding: var(--space-md);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.card-sharp:hover {
+    border-color: var(--accent);
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.testimonial-card {
+    background: var(--bg-card);
+    padding: var(--space-md);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.testimonial-stars {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: var(--space-sm);
+}
+
+.testimonial-author {
+    margin-top: var(--space-sm);
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
 }
