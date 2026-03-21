@@ -213,7 +213,7 @@
 <!-- SimplyBook.me Widget -->
 <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
 <script type="text/javascript">
-    var widget = new SimplybookWidget({
+    var sbWidget = new SimplybookWidget({
         "widget_type": "iframe",
         "url": "https://singtheeasyway.simplybook.me",
         "theme": "default",
@@ -232,7 +232,7 @@
             "sb_company_label_color": "#552f34",
             "hide_img_mode": "1",
             "show_sidebar": "1"
-        },
+        });
         "timeline": "modern",
         "datepicker": "top_calendar",
         "is_rtl": false,
@@ -264,7 +264,7 @@
         document.querySelectorAll('.book-btn, #heroBookBtn, #ctaBookBtn, #floatBookBtn').forEach(function(btn) {
             if(btn) {
                 btn.addEventListener('click', function() {
-                    widget.open();
+                    sbWidget.open();
                 });
             }
         });
