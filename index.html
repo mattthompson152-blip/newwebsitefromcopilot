@@ -210,39 +210,21 @@
     <button class="btn secondary" id="floatEnquiryBtn">Enquire</button>
 </div>
 
-<!-- SimplyBook.me Widget -->
-<script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
+    <div id="sbw_qvydiz"></div>
+
+    <!-- SimplyBook.me Widget -->
 <script type="text/javascript">
-    var sbWidget = new SimplybookWidget({
-        "widget_type": "button",
-        "url": "https://singtheeasyway.simplybook.me",
-        "theme": "default",
-        "theme_settings": {
-            "timeline_hide_unavailable": "1",
-            "hide_past_days": "0",
-            "timeline_show_end_time": "0",
-            "timeline_modern_display": "as_slots",
-            "sb_base_color": "#ff6b35",
-            "display_item_mode": "block",
-            "booking_nav_bg_color": "#ff6b35",
-            "body_bg_color": "#f2f2f2",
-            "dark_font_color": "#474747",
-            "light_font_color": "#f5fcff",
-            "btn_color_1": "#ff6b35",
-            "sb_company_label_color": "#552f34",
-            "hide_img_mode": "1",
-            "show_sidebar": "1"
-        },
-        "timeline": "modern",
-        "datepicker": "top_calendar",
-        "is_rtl": false,
-        "app_config": {
-            "clear_session": 0,
-            "allow_switch_to_ada": 0,
-            "predefined": []
-        }
-    });
+    (function(w, d, s, i) {
+        var script = d.createElement(s);
+        script.async = true;
+        script.src = "//widget.simplybook.me/v2/widget/widget.js";
+        script.onload = function() {
+            new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/singtheeasyway.simplybook.me","theme":"default","theme_settings":{"timeline_hide_unavailable":"1","hide_past_days":"0","timeline_show_end_time":"0","timeline_modern_display":"as_slots","sb_base_color":"#dd3649","display_item_mode":"block","booking_nav_bg_color":"#dd3649","body_bg_color":"#f2f2f2","sb_review_image":"12","sb_review_image_preview":"\/uploads\/singtheeasyway\/image_files\/preview\/736b781edc1d1a51acf11fcb492cf177.jpeg","dark_font_color":"#474747","light_font_color":"#f5fcff","btn_color_1":"#dd3649","sb_company_label_color":"#552f34","hide_img_mode":"1","show_sidebar":"1","sb_busy":"#c7b3b3","sb_available":"#d6ebff"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":[]},"container_id":"sbw_qvydiz"});
+        };
+        d.head.appendChild(script);
+    })(window, document, 'script', 'sbw_qvydiz');
 </script>
+
 
 <script src="assets/js/theme-toggle.js"></script>
 <script src="assets/js/cta.js"></script>
