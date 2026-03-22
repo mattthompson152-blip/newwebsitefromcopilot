@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sing The Easy Way | Online Singing Lessons</title>
-    <meta name="description" content="Professional online singing lessons with Matt Thompson. 25+ years experience teaching celebrities, film stars, and Bollywood performers." />
+    <title>Sing The Easy Way | Celebrity Vocal Coach Matt Thompson</title>
+    <meta name="description" content="Celebrity vocal coach Matt Thompson. 25+ years training recording artists, film stars, and performers. Professional online singing lessons worldwide." />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
@@ -23,15 +23,23 @@
         }
         
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.4rem;
+            color: var(--accent);
             margin-bottom: 1.5rem;
+            font-weight: 600;
         }
         
         .hero-text p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 1rem;
             opacity: 0.9;
+            line-height: 1.6;
         }
         
         .hero-image-side {
@@ -46,6 +54,50 @@
             border-radius: 16px;
             box-shadow: 0 30px 60px rgba(0,0,0,0.5);
             filter: brightness(1.08) contrast(1.05);
+        }
+        
+        .credentials-card {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem auto;
+            max-width: 1000px;
+            color: white;
+            box-shadow: 0 20px 40px rgba(255,107,53,0.3);
+        }
+        
+        .credentials-card h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .credential-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .credential-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .credential-text strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .credential-text span {
+            font-size: 0.95rem;
+            opacity: 0.95;
         }
         
         .stats {
@@ -79,6 +131,11 @@
             margin: 2rem 0;
         }
         
+        .pricing-card .badge.save {
+            background: #ff6b35;
+            color: white;
+        }
+        
         @media (max-width: 900px) {
             .hero-content {
                 grid-template-columns: 1fr;
@@ -104,6 +161,10 @@
             
             .stats {
                 justify-content: center;
+            }
+            
+            .credentials-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -147,63 +208,53 @@
     <div class="hero-content">
         <div class="hero-text">
             <span class="badge">Celebrity Vocal Coach</span>
-            <h1>Learn to Sing<br><span class="accent">The Easy Way</span></h1>
-            <p>Professional online singing lessons with 25+ years experience teaching recording artists, film stars, and Bollywood performers.</p>
-            <p class="sub-text">Now teaching exclusively online from my mobile studio.</p>
+            <h1>Matt Thompson</h1>
+            <p class="subtitle">The Easy Way to Sing</p>
+            <p>From West End stages to Bollywood studios, I have spent 25 years training recording artists, film stars, and performers to find their voice. Now teaching exclusively online from my mobile studio, I bring professional vocal coaching directly to you — wherever you are in the world.</p>
+            <p>My method breaks down complex techniques into simple, actionable steps. No jargon. No confusion. Just your voice, better.</p>
             
             <div class="cta-block">
                 <button class="btn primary book-btn" id="heroBookBtn">Book Your £25 Consultation</button>
                 <button class="btn secondary enquiry-btn" id="heroEnquiryBtn">Send an Enquiry</button>
             </div>
-            
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-icon">★</span>
-                    <div>
-                        <strong>Celebrity</strong>
-                        <span>Vocal Coach</span>
-                    </div>
-                </div>
-                <div class="stat">
-                    <span class="stat-icon">●</span>
-                    <div>
-                        <strong>25+</strong>
-                        <span>Years Experience</span>
-                    </div>
-                </div>
-                <div class="stat">
-                    <span class="stat-icon">👥</span>
-                    <div>
-                        <strong>All</strong>
-                        <span>Skill Levels</span>
-                    </div>
-                </div>
-                <div class="stat">
-                    <span class="stat-icon">🌐</span>
-                    <div>
-                        <strong>Online</strong>
-                        <span>Worldwide</span>
-                    </div>
-                </div>
-            </div>
         </div>
         
         <div class="hero-image-side">
-            <img src="assets/matt-portrait-online-singing-lessons.jpg" alt="Matt Thompson - Professional Singing Teacher">
+            <img src="assets/matt-portrait-online-singing-lessons.jpg" alt="Matt Thompson - Celebrity Vocal Coach">
         </div>
     </div>
 </header>
 
-<section class="payment-methods">
-    <div class="container">
-        <p class="payment-label">Secure payment options</p>
-        <div class="payment-logos">
-            <img src="assets/images/payment-visa.svg" alt="Visa">
-            <img src="assets/images/payment-mastercard.svg" alt="Mastercard">
-            <img src="assets/images/payment-amex.svg" alt="American Express">
-            <img src="assets/images/payment-applepay.svg" alt="Apple Pay">
-            <img src="assets/images/payment-googlepay.svg" alt="Google Pay">
-            <img src="assets/images/payment-paypal.svg" alt="PayPal">
+<section class="credentials-card">
+    <h2>Why Learn From Me?</h2>
+    <div class="credentials-grid">
+        <div class="credential-item">
+            <span class="credential-icon">★</span>
+            <div class="credential-text">
+                <strong>25+ Years Experience</strong>
+                <span>Training professionals in the industry</span>
+            </div>
+        </div>
+        <div class="credential-item">
+            <span class="credential-icon">🎭</span>
+            <div class="credential-text">
+                <strong>Industry Background</strong>
+                <span>West End, Bollywood, recording studios</span>
+            </div>
+        </div>
+        <div class="credential-item">
+            <span class="credential-icon">🌍</span>
+            <div class="credential-text">
+                <strong>Teaching Worldwide</strong>
+                <span>Online lessons from my mobile studio</span>
+            </div>
+        </div>
+        <div class="credential-item">
+            <span class="credential-icon">🎯</span>
+            <div class="credential-text">
+                <strong>The Easy Way Method</strong>
+                <span>Proven results without the confusion</span>
+            </div>
         </div>
     </div>
 </section>
@@ -240,8 +291,8 @@
 
 <section class="pricing">
     <div class="container">
-        <h2>Lesson Pricing</h2>
-        <p class="section-subtitle">Flexible options to suit your needs.</p>
+        <h2>Work With Me</h2>
+        <p class="section-subtitle">Flexible options to suit your goals.</p>
         
         <div class="pricing-grid">
             <div class="pricing-card">
@@ -257,11 +308,12 @@
             </div>
             <div class="pricing-card">
                 <span class="badge">Single</span>
-                <h3>Single Lesson</h3>
+                <h3>One Hour Lesson</h3>
                 <p class="price">£65</p>
                 <ul>
                     <li>One-to-one online session</li>
                     <li>Personalised technique work</li>
+                    <li>Recording provided</li>
                 </ul>
                 <button class="btn primary book-btn">Book Single Lesson</button>
             </div>
@@ -272,7 +324,7 @@
                 <ul>
                     <li>Ten 1-hour sessions</li>
                     <li>Custom long-term plan</li>
-                    <li>Email support</li>
+                    <li>Email support between lessons</li>
                 </ul>
                 <button class="btn primary book-btn">Book 10-Lesson Block</button>
             </div>
