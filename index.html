@@ -8,19 +8,48 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
-        .hero-image {
-            margin-top: 40px;
-            text-align: center;
+        .hero-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-        .hero-image img {
-            max-width: 60%;
+        
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .hero-image-side {
+            flex: 0 0 40%;
+            max-width: 400px;
+        }
+        
+        .hero-image-side img {
+            width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
+        
         @media (max-width: 768px) {
-            .hero-image img {
-                max-width: 80%;
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero-text {
+                text-align: center;
+            }
+            
+            .hero-image-side {
+                flex: none;
+                max-width: 280px;
+                order: -1;
             }
         }
     </style>
@@ -52,49 +81,51 @@
 <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-        <span class="badge">Celebrity Vocal Coach</span>
-        <h1>Learn to Sing<br><span class="accent">The Easy Way</span></h1>
-        <p>Professional online singing lessons with Matt Thompson. 25+ years of experience teaching recording artists, film stars, TV personalities, and Bollywood performers.</p>
-        <p class="sub-text">Now teaching exclusively online from my mobile studio.</p>
-        
-        <div class="cta-block">
-            <button class="btn primary book-btn" id="heroBookBtn">Book Your £25 Consultation</button>
-            <button class="btn secondary enquiry-btn" id="heroEnquiryBtn">Send an Enquiry</button>
+        <div class="hero-text">
+            <span class="badge">Celebrity Vocal Coach</span>
+            <h1>Learn to Sing<br><span class="accent">The Easy Way</span></h1>
+            <p>Professional online singing lessons with Matt Thompson. 25+ years of experience teaching recording artists, film stars, TV personalities, and Bollywood performers.</p>
+            <p class="sub-text">Now teaching exclusively online from my mobile studio.</p>
+            
+            <div class="cta-block">
+                <button class="btn primary book-btn" id="heroBookBtn">Book Your £25 Consultation</button>
+                <button class="btn secondary enquiry-btn" id="heroEnquiryBtn">Send an Enquiry</button>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-icon">★</span>
+                    <div>
+                        <strong>Celebrity</strong>
+                        <span>Vocal Coach</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">●</span>
+                    <div>
+                        <strong>25+</strong>
+                        <span>Years Experience</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">👥</span>
+                    <div>
+                        <strong>All</strong>
+                        <span>Skill Levels</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="stat-icon">🌐</span>
+                    <div>
+                        <strong>Online</strong>
+                        <span>Worldwide</span>
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <div class="stats">
-            <div class="stat">
-                <span class="stat-icon">★</span>
-                <div>
-                    <strong>Celebrity</strong>
-                    <span>Vocal Coach</span>
-                </div>
-            </div>
-            <div class="stat">
-                <span class="stat-icon">●</span>
-                <div>
-                    <strong>25+</strong>
-                    <span>Years Experience</span>
-                </div>
-            </div>
-            <div class="stat">
-                <span class="stat-icon">👥</span>
-                <div>
-                    <strong>All</strong>
-                    <span>Skill Levels</span>
-                </div>
-            </div>
-            <div class="stat">
-                <span class="stat-icon">🌐</span>
-                <div>
-                    <strong>Online</strong>
-                    <span>Worldwide</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-image">
-            <img src="assets/matt-portrait-online singing-lessons.jpg" alt="Matt Thompson - Professional Singing Teacher">
+        <div class="hero-image-side">
+            <img src="assets/images/matt-portrait-online singing-lessons.jpg" alt="Matt Thompson - Professional Singing Teacher">
         </div>
     </div>
 </header>
