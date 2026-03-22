@@ -21,14 +21,32 @@
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+    
+    .about-wrapper {
+        flex-direction: column;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
 }
 
 /* =======================================
    MOBILE (max-width: 768px)
 ======================================= */
 @media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
     nav ul {
         display: none;
+    }
+    
+    .theme-toggle {
+        margin-left: auto;
+        margin-right: var(--space-sm);
     }
     
     .hero h1 {
@@ -73,6 +91,10 @@
     .page-header h1 {
         font-size: 2.5rem;
     }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* =======================================
@@ -94,5 +116,14 @@
     
     .payment-logos img {
         height: 24px;
+    }
+    
+    .floating-cta {
+        bottom: var(--space-sm);
+    }
+    
+    .floating-cta .btn {
+        padding: 10px 16px;
+        font-size: 0.85rem;
     }
 }
