@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Sing The Easy Way</title>
-    <meta name="description" content="Get in touch with Matt Thompson. Book a consultation or send an enquiry about online singing lessons." />
+    <title>Sing The Easy Way | Online Singing Lessons</title>
+    <meta name="description" content="Professional online singing lessons with Matt Thompson. 25+ years experience teaching celebrities, film stars, and Bollywood performers." />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
@@ -14,7 +14,14 @@
 <nav>
     <div class="nav-container">
         <a href="index.html" class="logo">Sing The Easy Way</a>
-        <ul>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul id="mainNav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Matt</a></li>
             <li><a href="lessons.html">Lessons</a></li>
@@ -22,95 +29,49 @@
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div id="theme-toggle" class="theme-toggle">
-            <div class="toggle-handle"></div>
-        </div>
     </div>
 </nav>
 
-<header class="page-header">
+<header class="hero">
     <div class="hero-bg"></div>
-    <div class="page-header-content">
-        <h1>Get in Touch</h1>
-        <p>Book a lesson or send an enquiry.</p>
-    </div>
-</header>
-
-<main class="page-content">
-    <div class="container">
+    <div class="hero-content">
+        <span class="badge">Celebrity Vocal Coach</span>
+        <h1>Learn to Sing<br><span class="accent">The Easy Way</span></h1>
+        <p>Professional online singing lessons with Matt Thompson. 25+ years of experience teaching recording artists, film stars, TV personalities, and Bollywood performers.</p>
+        <p class="sub-text">Now teaching exclusively online from my mobile studio.</p>
         
-        <div class="contact-grid">
-            <div>
-                <h2>Contact Information</h2>
-                <p>Ready to start your vocal journey? Get in touch using the details below.</p>
-                
-                <div class="card-sharp" style="margin-top: var(--space-lg); padding: var(--space-lg);">
-                    <p><strong>Email:</strong> matt@singtheeasyway.com</p>
-                    <p style="margin-top: var(--space-sm);"><strong>Location:</strong> Online Worldwide</p>
-                    <p style="margin-top: var(--space-sm);"><strong>Lessons via:</strong> FaceTime, WhatsApp, Microsoft Teams</p>
-                </div>
-            </div>
-            
-            <div>
-                <h2>Send an Enquiry</h2>
-                <p>Have a question? Send me a message and I'll get back to you within 24 hours.</p>
-                
-                <div class="cta-block" style="margin-top: var(--space-lg);">
-                    <button class="btn secondary enquiry-btn">Open Enquiry Form</button>
-                </div>
-            </div>
+        <div class="cta-block">
+            <button class="btn primary book-btn" id="heroBookBtn">Book Your £25 Consultation</button>
+            <button class="btn secondary enquiry-btn" id="heroEnquiryBtn">Send an Enquiry</button>
         </div>
         
-        <div class="payment-methods" style="margin-top: var(--space-xl);">
-            <p class="payment-label">Secure payment options</p>
-            <div class="payment-logos">
-                <img src="assets/images/payment-visa.svg" alt="Visa">
-                <img src="assets/images/payment-mastercard.svg" alt="Mastercard">
-                <img src="assets/images/payment-amex.svg" alt="American Express">
-                <img src="assets/images/payment-applepay.svg" alt="Apple Pay">
-                <img src="assets/images/payment-googlepay.svg" alt="Google Pay">
-                <img src="assets/images/payment-paypal.svg" alt="PayPal">
-            </div>
-        </div>
-        
-    </div>
-</main>
-
-<section class="section-angled fade-in">
-    <div class="container text-center">
-        <span class="badge">Quick Response</span>
-        <h2>I'll Reply Within 24 Hours</h2>
-        <p>All enquiries are answered personally.</p>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <div class="footer-logo">Sing The Easy Way</div>
-                <p>Professional online vocal coaching for all levels.</p>
-                <div class="socials">
-                    <span>IG</span>
-                    <span>TT</span>
-                    <span>YT</span>
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-icon">★</span>
+                <div>
+                    <strong>Celebrity</strong>
+                    <span>Vocal Coach</span>
                 </div>
             </div>
-            <div>
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Matt</a></li>
-                    <li><a href="lessons.html">Lessons</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
+            <div class="stat">
+                <span class="stat-icon">●</span>
+                <div>
+                    <strong>25+</strong>
+                    <span>Years Experience</span>
+                </div>
+            </div>
+            <div class="stat">
+                <span class="stat-icon">👥</span>
+                <div>
+                    <strong>All</strong>
+                    <span>Skill Levels</span>
+                                   <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h3>Contact</h3>
-                <p><strong>Mobile:</strong> </p>
-                <p><strong>Email:</strong> </p>
+                <p><strong>Email:</strong> matt@singtheeasyway.com</p>
                 <button class="btn secondary enquiry-btn">Send Enquiry</button>
             </div>
         </div>
@@ -122,9 +83,11 @@
     <button class="btn secondary enquiry-btn" id="floatEnquiryBtn">Enquire</button>
 </div>
 
-<!-- SimplyBook.me Widget -->
-<script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
-<script type="text/javascript">
+<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
+<script src="https://form.jotform.com/static/feedback2.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
     var widget = new SimplybookWidget({
         "widget_type": "button",
         "url": "https://singtheeasyway.simplybook.me",
@@ -154,47 +117,47 @@
             "predefined": []
         }
     });
-</script>
 
-<!-- JotForm Lightbox -->
-<script src="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        var jotformFeedback = new JotformFeedback({
-            formId: '51562311137345',
-            base: 'https://form.jotform.com/',
-            windowTitle: 'Send an Enquiry',
-            background: '#ff6b35',
-            fontColor: '#FFFFFF',
-            type: '1',
-            height: 500,
-            width: 700,
-            openOnLoad: false
-        });
-        
-        document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
-            if(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    widget.open();
-                });
-            }
-        });
-        
-        document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
-            if(btn) {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    jotformFeedback.open();
-                });
+    var jotformFeedback = new JotformFeedback({
+        formId: '51562311137345',
+        base: 'https://form.jotform.com/',
+        windowTitle: 'Send an Enquiry',
+        background: '#ff6b35',
+        fontColor: '#FFFFFF',
+        type: '1',
+        height: 500,
+        width: 700,
+        openOnLoad: false
+    });
+
+    document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+        document.getElementById('mainNav').classList.toggle('active');
+        this.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (widget && typeof widget.open === 'function') {
+                widget.open();
+            } else {
+                window.open('https://singtheeasyway.simplybook.me', '_blank');
             }
         });
     });
-</script>
 
-<script src="assets/js/theme-toggle.js"></script>
-<script src="assets/js/cta.js"></script>
-<script src="assets/js/main.js"></script>
+    document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (jotformFeedback && typeof jotformFeedback.open === 'function') {
+                jotformFeedback.open();
+            } else {
+                window.open('https://form.jotform.com/51562311137345', '_blank');
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
