@@ -4,177 +4,211 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sing The Easy Way | Celebrity Vocal Coach Matt Thompson</title>
-    <meta name="description" content="Celebrity vocal coach Matt Thompson. 25+ years training recording artists, film stars, and performers. Professional online singing lessons worldwide." />
+    <meta name="description" content="Celebrity vocal coach Matt Thompson. 25+ years training recording artists, film stars, and performers. 90,000 TikTok followers. Professional online singing lessons worldwide." />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
             align-items: center;
+            overflow: hidden;
         }
         
-        .hero-text {
-            text-align: left;
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%), url('assets/matt-portrait-online-singing-lessons.jpg');
+            background-size: cover;
+            background-position: center right;
+            background-repeat: no-repeat;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+            padding: 2rem;
+            margin-left: 5%;
         }
         
         .hero-text h1 {
-            font-size: 3.2rem;
-            line-height: 1.1;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
         
         .hero-text .subtitle {
-            font-size: 1.4rem;
-            color: var(--accent);
+            font-size: 1.6rem;
+            color: #ff6b35;
             margin-bottom: 1.5rem;
-            font-weight: 600;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
         
         .hero-text p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 1rem;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        .hero-image-side {
-            display: flex;
-            justify-content: center;
-        }
-        
-        .hero-image-side img {
-            width: 100%;
-            max-width: 380px;
-            height: auto;
-            border-radius: 16px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-            filter: brightness(1.08) contrast(1.05);
-        }
-        
-        .credentials-card {
-            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin: 3rem auto;
-            max-width: 1000px;
-            color: white;
-            box-shadow: 0 20px 40px rgba(255,107,53,0.3);
-        }
-        
-        .credentials-card h2 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-        
-        .credentials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-        
-        .credential-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-        }
-        
-        .credential-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .credential-text strong {
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
-        }
-        
-        .credential-text span {
-            font-size: 0.95rem;
             opacity: 0.95;
+            line-height: 1.7;
+            max-width: 550px;
         }
         
-        .stats {
+        .social-proof {
             display: flex;
             gap: 2rem;
-            margin-top: 2rem;
+            margin: 2rem 0;
             flex-wrap: wrap;
         }
         
-        .stat {
+        .social-proof-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
         
-        .stat-icon {
-            font-size: 1.5rem;
+        .social-proof-icon {
+            font-size: 1.3rem;
         }
         
-        .stat strong {
+        .social-proof-text strong {
             display: block;
             font-size: 1.1rem;
         }
         
-        .stat span {
-            font-size: 0.9rem;
+        .social-proof-text span {
+            font-size: 0.85rem;
             opacity: 0.8;
         }
         
         .cta-block {
-            margin: 2rem 0;
+            margin: 2.5rem 0;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
         
-        .pricing-card .badge.save {
-            background: #ff6b35;
-            color: white;
+        .credentials-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 4rem 2rem;
+            margin-top: 0;
+        }
+        
+        .credentials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .credentials-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+        
+        .credentials-text p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .credentials-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .credentials-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        
+        .credentials-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .credentials-image {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .credentials-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
         }
         
         @media (max-width: 900px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
+            .hero-bg-image {
+                background-position: center;
+                background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%), url('assets/matt-portrait-online-singing-lessons.jpg');
             }
             
-            .hero-text {
+            .hero-content {
+                margin: 0 auto;
                 text-align: center;
+                padding: 3rem 1.5rem;
             }
             
             .hero-text h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             
-            .hero-image-side {
-                order: -1;
+            .hero-text .subtitle {
+                font-size: 1.3rem;
             }
             
-            .hero-image-side img {
-                max-width: 280px;
-            }
-            
-            .stats {
+            .social-proof {
                 justify-content: center;
             }
             
-            .credentials-grid {
+            .cta-block {
+                justify-content: center;
+            }
+            
+            .credentials-container {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .credentials-text {
+                text-align: center;
+            }
+            
+            .credentials-list li {
+                text-align: left;
             }
         }
         
         @media (max-width: 480px) {
             .hero-text h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
-            .stats {
-                gap: 1rem;
+            .social-proof-item {
+                padding: 0.6rem 1rem;
             }
         }
     </style>
@@ -204,65 +238,65 @@
 </nav>
 
 <header class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg-image"></div>
     <div class="hero-content">
         <div class="hero-text">
             <span class="badge">Celebrity Vocal Coach</span>
             <h1>Matt Thompson</h1>
             <p class="subtitle">The Easy Way to Sing</p>
-            <p>From West End stages to Bollywood studios, I have spent 25 years training recording artists, film stars, and performers to find their voice. Now teaching exclusively online from my mobile studio, I bring professional vocal coaching directly to you — wherever you are in the world.</p>
-            <p>My method breaks down complex techniques into simple, actionable steps. No jargon. No confusion. Just your voice, better.</p>
+            <p>From West End stages to Bollywood studios, I have spent 25 years training recording artists, film stars, and performers to find their voice. Now teaching exclusively online from my mobile studio worldwide.</p>
+            
+            <div class="social-proof">
+                <div class="social-proof-item">
+                    <span class="social-proof-icon">★</span>
+                    <div class="social-proof-text">
+                        <strong>25+ Years</strong>
+                        <span>Industry Experience</span>
+                    </div>
+                </div>
+                <div class="social-proof-item">
+                    <span class="social-proof-icon">📱</span>
+                    <div class="social-proof-text">
+                        <strong>90,000</strong>
+                        <span>TikTok Followers</span>
+                    </div>
+                </div>
+            </div>
             
             <div class="cta-block">
                 <button class="btn primary book-btn" id="heroBookBtn">Book Your £25 Consultation</button>
                 <button class="btn secondary enquiry-btn" id="heroEnquiryBtn">Send an Enquiry</button>
             </div>
         </div>
-        
-        <div class="hero-image-side">
-            <img src="assets/matt-portrait-online-singing-lessons.jpg" alt="Matt Thompson - Celebrity Vocal Coach">
-        </div>
     </div>
 </header>
 
-<section class="credentials-card">
-    <h2>Why Learn From Me?</h2>
-    <div class="credentials-grid">
-        <div class="credential-item">
-            <span class="credential-icon">★</span>
-            <div class="credential-text">
-                <strong>25+ Years Experience</strong>
-                <span>Training professionals in the industry</span>
+<section class="credentials-section">
+    <div class="credentials-container">
+        <div class="credentials-text">
+            <h2>Why Learn From a Celebrity Coach?</h2>
+            <p>My method breaks down complex techniques into simple, actionable steps. No jargon. No confusion. Just your voice, better.</p>
+            <ul class="credentials-list">
+                <li>Trained recording artists, film stars, and TV personalities</li>
+                <li>West End and Bollywood industry background</li>
+                <li>Proven "Easy Way" method with real results</li>
+                <li>Online lessons from my mobile studio worldwide</li>
+                <li>Personalised coaching tailored to your goals</li>
+            </ul>
+            <div class="cta-block" style="margin-top: 2rem;">
+                <button class="btn primary book-btn">View Pricing</button>
             </div>
         </div>
-        <div class="credential-item">
-            <span class="credential-icon">🎭</span>
-            <div class="credential-text">
-                <strong>Industry Background</strong>
-                <span>West End, Bollywood, recording studios</span>
-            </div>
-        </div>
-        <div class="credential-item">
-            <span class="credential-icon">🌍</span>
-            <div class="credential-text">
-                <strong>Teaching Worldwide</strong>
-                <span>Online lessons from my mobile studio</span>
-            </div>
-        </div>
-        <div class="credential-item">
-            <span class="credential-icon">🎯</span>
-            <div class="credential-text">
-                <strong>The Easy Way Method</strong>
-                <span>Proven results without the confusion</span>
-            </div>
+        <div class="credentials-image">
+            <img src="assets/matt-teaching-group-singing-Lessons.jpg" alt="Matt Thompson teaching group singing lessons">
         </div>
     </div>
 </section>
 
-<section class="how-it-works">
+<section class="how-it-works" style="padding: 4rem 2rem;">
     <div class="container">
-        <h2>How Online Lessons Work</h2>
-        <p class="section-subtitle">Simple, flexible, and effective — learn from home with expert guidance.</p>
+        <h2 style="text-align: center; margin-bottom: 1rem;">How Online Lessons Work</h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem;">Simple, flexible, and effective — learn from home with expert guidance.</p>
         
         <div class="steps">
             <div class="step">
@@ -289,14 +323,14 @@
     </div>
 </section>
 
-<section class="pricing">
+<section class="pricing" style="background: #0f0f1a; padding: 4rem 2rem;">
     <div class="container">
-        <h2>Work With Me</h2>
-        <p class="section-subtitle">Flexible options to suit your goals.</p>
+        <h2 style="text-align: center; margin-bottom: 1rem;">Work With Me</h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem;">Flexible options to suit your goals.</p>
         
         <div class="pricing-grid">
-            <div class="pricing-card">
-                <span class="badge">£25 Consultation</span>
+            <div class="pricing-card" style="background: #1a1a2e; border: 1px solid rgba(255,255,255,0.1);">
+                <span class="badge" style="background: rgba(255,255,255,0.1); color: #fff;">£25 Consultation</span>
                 <h3>30-Minute Assessment</h3>
                 <p class="price">£25</p>
                 <ul>
@@ -306,8 +340,8 @@
                 </ul>
                 <button class="btn primary book-btn">Book Consultation</button>
             </div>
-            <div class="pricing-card">
-                <span class="badge">Single</span>
+            <div class="pricing-card" style="background: #1a1a2e; border: 1px solid rgba(255,255,255,0.1);">
+                <span class="badge" style="background: rgba(255,255,255,0.1); color: #fff;">Single</span>
                 <h3>One Hour Lesson</h3>
                 <p class="price">£65</p>
                 <ul>
@@ -317,8 +351,8 @@
                 </ul>
                 <button class="btn primary book-btn">Book Single Lesson</button>
             </div>
-            <div class="pricing-card">
-                <span class="badge save">Save £200</span>
+            <div class="pricing-card" style="background: #1a1a2e; border: 1px solid #ff6b35;">
+                <span class="badge" style="background: #ff6b35; color: #fff;">Save £200</span>
                 <h3>10-Lesson Block</h3>
                 <p class="price">£600</p>
                 <ul>
