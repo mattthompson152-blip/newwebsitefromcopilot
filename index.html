@@ -218,80 +218,92 @@
     <button class="btn secondary enquiry-btn" id="floatEnquiryBtn">Enquire</button>
 </div>
 
-<!-- SimplyBook.me Widget -->
+<!-- Scripts at bottom of body -->
 <script src="//widget.simplybook.me/v2/widget/widget.js"></script>
-<!-- JotForm Lightbox -->
 <script src="https://form.jotform.com/static/feedback2.js"></script>
 
 <script>
-// Initialize SimplyBook widget
-var widget = new SimplybookWidget({
-    "widget_type": "button",
-    "url": "https://singtheeasyway.simplybook.me",
-    "theme": "default",
-    "theme_settings": {
-        "timeline_hide_unavailable": "1",
-        "hide_past_days": "0",
-        "timeline_show_end_time": "0",
-        "timeline_modern_display": "as_slots",
-        "sb_base_color": "#ff6b35",
-        "display_item_mode": "block",
-        "booking_nav_bg_color": "#ff6b35",
-        "body_bg_color": "#f2f2f2",
-        "dark_font_color": "#474747",
-        "light_font_color": "#f5fcff",
-        "btn_color_1": "#ff6b35",
-        "sb_company_label_color": "#552f34",
-        "hide_img_mode": "1",
-        "show_sidebar": "1"
-    },
-    "timeline": "modern",
-    "datepicker": "top_calendar",
-    "is_rtl": false,
-    "app_config": {
-        "clear_session": 0,
-        "allow_switch_to_ada": 0,
-        "predefined": []
-    }
-});
-
-// Initialize JotForm
-var jotformFeedback = new JotformFeedback({
-    formId: '51562311137345',
-    base: 'https://form.jotform.com/',
-    windowTitle: 'Send an Enquiry',
-    background: '#ff6b35',
-    fontColor: '#FFFFFF',
-    type: '1',
-    height: 500,
-    width: 700,
-    openOnLoad: false
-});
-
-// Mobile menu toggle
-document.getElementById('mobileMenuToggle').addEventListener('click', function() {
-    document.getElementById('mainNav').classList.toggle('active');
-    this.classList.toggle('active');
-});
-
-// Booking buttons
-document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        widget.open();
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize SimplyBook widget
+    var widget = new SimplybookWidget({
+        "widget_type": "button",
+        "url": "https://singtheeasyway.simplybook.me",
+        "theme": "default",
+        "theme_settings": {
+            "timeline_hide_unavailable": "1",
+            "hide_past_days": "0",
+            "timeline_show_end_time": "0",
+            "timeline_modern_display": "as_slots",
+            "sb_base_color": "#ff6b35",
+            "display_item_mode": "block",
+            "booking_nav_bg_color": "#ff6b35",
+            "body_bg_color": "#f2f2f2",
+            "dark_font_color": "#474747",
+            "light_font_color": "#f5fcff",
+            "btn_color_1": "#ff6b35",
+            "sb_company_label_color": "#552f34",
+            "hide_img_mode": "1",
+            "show_sidebar": "1"
+        },
+        "timeline": "modern",
+        "datepicker": "top_calendar",
+        "is_rtl": false,
+        "app_config": {
+            "clear_session": 0,
+            "allow_switch_to_ada": 0,
+            "predefined": []
+        }
     });
-});
 
-// Enquiry buttons
-document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        jotformFeedback.open();
+    // Initialize JotForm
+    var jotformFeedback = new JotformFeedback({
+        formId: '51562311137345',
+        base: 'https://form.jotform.com/',
+        windowTitle: 'Send an Enquiry',
+        background: '#ff6b35',
+        fontColor: '#FFFFFF',
+        type: '1',
+        height: 500,
+        width: 700,
+        openOnLoad: false
+    });
+
+    // Mobile menu toggle
+    var mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    var mainNav = document.getElementById('mainNav');
+    
+    if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    }
+
+    // Booking buttons
+    document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (widget && typeof widget.open === 'function') {
+                widget.open();
+            } else {
+                window.open('https://singtheeasyway.simplybook.me', '_blank');
+            }
+        });
+    });
+
+    // Enquiry buttons
+    document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (jotformFeedback && typeof jotformFeedback.open === 'function') {
+                jotformFeedback.open();
+            } else {
+                window.open('https://form.jotform.com/51562311137345', '_blank');
+            }
+        });
     });
 });
 </script>
-
-<script src="assets/js/theme-toggle.js"></script>
 
 </body>
 </html>
