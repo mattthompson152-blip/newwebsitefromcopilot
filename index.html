@@ -29,10 +29,6 @@
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        
-        <div id="theme-toggle" class="theme-toggle">
-            <div class="toggle-handle"></div>
-        </div>
     </div>
 </nav>
 
@@ -205,8 +201,7 @@
             </div>
             <div>
                 <h3>Contact</h3>
-                <p><strong>Mobile:</strong> </p>
-                <p><strong>Email:</strong> </p>
+                <p><strong>Email:</strong> matt@singtheeasyway.com</p>
                 <button class="btn secondary enquiry-btn">Send Enquiry</button>
             </div>
         </div>
@@ -218,13 +213,11 @@
     <button class="btn secondary enquiry-btn" id="floatEnquiryBtn">Enquire</button>
 </div>
 
-<!-- Scripts at bottom of body -->
 <script src="//widget.simplybook.me/v2/widget/widget.js"></script>
 <script src="https://form.jotform.com/static/feedback2.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize SimplyBook widget
     var widget = new SimplybookWidget({
         "widget_type": "button",
         "url": "https://singtheeasyway.simplybook.me",
@@ -255,7 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initialize JotForm
     var jotformFeedback = new JotformFeedback({
         formId: '51562311137345',
         base: 'https://form.jotform.com/',
@@ -268,18 +260,11 @@ document.addEventListener('DOMContentLoaded', function() {
         openOnLoad: false
     });
 
-    // Mobile menu toggle
-    var mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    var mainNav = document.getElementById('mainNav');
-    
-    if (mobileMenuToggle && mainNav) {
-        mobileMenuToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-    }
+    document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+        document.getElementById('mainNav').classList.toggle('active');
+        this.classList.toggle('active');
+    });
 
-    // Booking buttons
     document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
@@ -291,7 +276,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enquiry buttons
     document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
