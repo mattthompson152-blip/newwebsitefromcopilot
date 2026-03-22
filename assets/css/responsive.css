@@ -30,6 +30,17 @@
         grid-template-columns: 1fr;
         gap: var(--space-lg);
     }
+    
+    /* About Page Image - Tablet */
+    .group-teaching-img {
+        max-width: 400px;
+    }
+    
+    /* Testimonials Headshot - Tablet */
+    .headshot-performance {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 /* =======================================
@@ -90,6 +101,30 @@
     .testimonial-grid {
         grid-template-columns: 1fr;
     }
+    
+    /* About Page Image - Mobile */
+    .about-image-container {
+        min-width: auto;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .group-teaching-img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    /* Testimonials Headshot - Mobile */
+    .instructor-intro {
+        margin-bottom: 2rem;
+        padding: 1rem 0;
+    }
+    
+    .headshot-performance {
+        width: 120px;
+        height: 120px;
+        border-width: 3px;
+    }
 }
 
 /* =======================================
@@ -122,7 +157,30 @@
         font-size: 0.85rem;
     }
 }
-/* Testimonials Page Headshot */
+
+/* =======================================
+   NEW IMAGE STYLES - DESKTOP
+   ======================================== */
+
+/* About Page - Group Teaching Image */
+.about-image-container {
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.group-teaching-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+/* Testimonials Page - Headshot */
 .instructor-intro {
     text-align: center;
     margin-bottom: 3rem;
@@ -148,26 +206,4 @@
     font-style: italic;
     color: var(--text-secondary);
     margin: 0;
-}
-
-/* Tablet */
-@media screen and (max-width: 1024px) {
-    .headshot-performance {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-/* Mobile */
-@media screen and (max-width: 767px) {
-    .instructor-intro {
-        margin-bottom: 2rem;
-        padding: 1rem 0;
-    }
-    
-    .headshot-performance {
-        width: 120px;
-        height: 120px;
-        border-width: 3px;
-    }
 }
