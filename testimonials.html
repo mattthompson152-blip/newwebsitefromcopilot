@@ -1,49 +1,215 @@
-/* Testimonials Page Headshot */
-.instructor-intro {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials | Sing The Easy Way</title>
+    <meta name="description" content="Read what students say about learning with Matt Thompson. Professional online vocal coaching with proven results." />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
 
-.headshot-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
+<body class="dark-mode">
 
-.headshot-performance {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">Sing The Easy Way</a>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul id="mainNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Matt</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-.intro-text {
-    font-style: italic;
-    color: var(--text-secondary);
-    margin: 0;
-}
+<header class="page-header">
+    <div class="hero-bg"></div>
+    <div class="page-header-content">
+        <h1>What Students Say</h1>
+        <p>Real feedback from singers who have trained with me.</p>
+    </div>
+</header>
 
-/* Tablet */
-@media screen and (max-width: 1024px) {
-    .headshot-performance {
-        width: 150px;
-        height: 150px;
-    }
-}
+<main class="page-content">
+    <div class="container">
+        
+        <div class="instructor-intro">
+            <div class="headshot-container">
+                <img src="assets/matt-headshot–online – singing-lessons.jpg" 
+                     alt="Matt Thompson - Professional Vocal Coach" 
+                     class="headshot-performance">
+            </div>
+            <p class="intro-text">Professional vocalist and experienced coach with 25+ years in the industry</p>
+        </div>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Matt's teaching style is clear, encouraging, and incredibly effective. I've improved more in a few months than I did in years of trying to teach myself."</p>
+                <div class="testimonial-author">— Sarah K.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"The online lessons are so convenient and professional. Matt makes it easy to understand technique and actually apply it to my singing."</p>
+                <div class="testimonial-author">— James R.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"I was nervous about online lessons, but Matt's setup and teaching made me feel comfortable from day one. My confidence has grown massively."</p>
+                <div class="testimonial-author">— Emma L.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Finally found a coach who explains things in a way that makes sense. My range has expanded and my tone has never been better."</p>
+                <div class="testimonial-author">— Michael T.</div>
+            </div>
+        </div>
+        
+        <div class="text-center" style="margin-top: var(--space-xl);">
+            <h2>Share Your Experience</h2>
+            <p>Have you learned with me? I'd love to hear your feedback.</p>
+            <div class="cta-block" style="justify-content: center;">
+                <button class="btn primary enquiry-btn">Submit Your Testimonial</button>
+            </div>
+        </div>
+        
+    </div>
+</main>
 
-/* Mobile */
-@media screen and (max-width: 767px) {
-    .instructor-intro {
-        margin-bottom: 2rem;
-        padding: 1rem 0;
-    }
-    
-    .headshot-performance {
-        width: 120px;
-        height: 120px;
-        border-width: 3px;
-    }
-}
+<section class="section-angled fade-in">
+    <div class="container text-center">
+        <span class="badge">Ready to Start?</span>
+        <h2>Book Your First Lesson Today</h2>
+        <p>Join these students and start your vocal journey.</p>
+        <div class="cta-block">
+            <button class="btn primary book-btn">View Pricing</button>
+            <button class="btn secondary enquiry-btn">Send an Enquiry</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">Sing The Easy Way</div>
+                <p>Online singing lessons for all levels, worldwide.</p>
+                <div class="socials">
+                    <span>IG</span>
+                    <span>TT</span>
+                    <span>YT</span>
+                </div>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Matt</a></li>
+                    <li><a href="lessons.html">Lessons</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p><strong>Email:</strong> matt@singtheeasyway.com</p>
+                <button class="btn secondary enquiry-btn">Send Enquiry</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="floating-cta">
+    <button class="btn primary book-btn" id="floatBookBtn">Book Lesson</button>
+    <button class="btn secondary enquiry-btn" id="floatEnquiryBtn">Enquire</button>
+</div>
+
+<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
+<script src="https://form.jotform.com/static/feedback2.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var widget = new SimplybookWidget({
+        "widget_type": "button",
+        "url": "https://singtheeasyway.simplybook.me",
+        "theme": "default",
+        "theme_settings": {
+            "timeline_hide_unavailable": "1",
+            "hide_past_days": "0",
+            "timeline_show_end_time": "0",
+            "timeline_modern_display": "as_slots",
+            "sb_base_color": "#ff6b35",
+            "display_item_mode": "block",
+            "booking_nav_bg_color": "#ff6b35",
+            "body_bg_color": "#f2f2f2",
+            "dark_font_color": "#474747",
+            "light_font_color": "#f5fcff",
+            "btn_color_1": "#ff6b35",
+            "sb_company_label_color": "#552f34",
+            "hide_img_mode": "1",
+            "show_sidebar": "1"
+        },
+        "timeline": "modern",
+        "datepicker": "top_calendar",
+        "is_rtl": false,
+        "app_config": {
+            "clear_session": 0,
+            "allow_switch_to_ada": 0,
+            "predefined": []
+        }
+    });
+
+    var jotformFeedback = new JotformFeedback({
+        formId: '51562311137345',
+        base: 'https://form.jotform.com/',
+        windowTitle: 'Send an Enquiry',
+        background: '#ff6b35',
+        fontColor: '#FFFFFF',
+        type: '1',
+        height: 500,
+        width: 700,
+        openOnLoad: false
+    });
+
+    document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+        document.getElementById('mainNav').classList.toggle('active');
+        this.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (widget && typeof widget.open === 'function') {
+                widget.open();
+            } else {
+                window.open('https://singtheeasyway.simplybook.me', '_blank');
+            }
+        });
+    });
+
+    document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (jotformFeedback && typeof jotformFeedback.open === 'function') {
+                jotformFeedback.open();
+            } else {
+                window.open('https://form.jotform.com/51562311137345', '_blank');
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
