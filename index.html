@@ -22,9 +22,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%), url('assets/matt-headshot-online-singing-lessons-copy.jpg');
+            background-image: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url('assets/matt-headshot-online-singing-lessons-copy.jpg');
             background-size: cover;
-            background-position: center right;
+            background-position: center;
             background-repeat: no-repeat;
             z-index: 0;
         }
@@ -32,20 +32,25 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 650px;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 2rem;
-            margin-left: 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
         }
         
         .hero-text h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             line-height: 1;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
         
         .hero-text .subtitle {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: #ff6b35;
             margin-bottom: 1.5rem;
             font-weight: 500;
@@ -53,16 +58,15 @@
         }
         
         .hero-text p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             margin-bottom: 1rem;
             opacity: 0.95;
             line-height: 1.7;
-            max-width: 550px;
         }
         
         .social-proof {
             display: flex;
-            gap: 2rem;
+            gap: 1rem;
             margin: 2rem 0;
             flex-wrap: wrap;
         }
@@ -70,33 +74,46 @@
         .social-proof-item {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-            padding: 0.75rem 1.25rem;
+            padding: 0.6rem 1rem;
             border-radius: 50px;
             border: 1px solid rgba(255,255,255,0.2);
         }
         
         .social-proof-icon {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
         
         .social-proof-text strong {
             display: block;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
         }
         
         .social-proof-text span {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             opacity: 0.8;
         }
         
         .cta-block {
-            margin: 2.5rem 0;
+            margin: 2rem 0;
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
+        }
+        
+        .hero-image-visible {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image-visible img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 16px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
         }
         
         .credentials-section {
@@ -161,23 +178,18 @@
         }
         
         @media (max-width: 900px) {
-            .hero-bg-image {
-                background-position: center;
-                background-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%), url('assets/matt-headshot-online-singing-lessons-copy.jpg');
-            }
-            
             .hero-content {
-                margin: 0 auto;
+                grid-template-columns: 1fr;
                 text-align: center;
-                padding: 3rem 1.5rem;
+                gap: 2rem;
             }
             
-            .hero-text h1 {
-                font-size: 2.8rem;
+            .hero-image-visible {
+                order: -1;
             }
             
-            .hero-text .subtitle {
-                font-size: 1.3rem;
+            .hero-image-visible img {
+                max-width: 280px;
             }
             
             .social-proof {
@@ -204,11 +216,11 @@
         
         @media (max-width: 480px) {
             .hero-text h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             .social-proof-item {
-                padding: 0.6rem 1rem;
+                padding: 0.5rem 0.8rem;
             }
         }
     </style>
@@ -250,23 +262,31 @@
                 <div class="social-proof-item">
                     <span class="social-proof-icon">★</span>
                     <div class="social-proof-text">
+                        <strong>Celebrity Coach</strong>
+                    </div>
+                </div>
+                <div class="social-proof-item">
+                    <span class="social-proof-icon">🎵</span>
+                    <div class="social-proof-text">
                         <strong>25+ Years</strong>
-                        <span>Industry Experience</span>
                     </div>
                 </div>
                 <div class="social-proof-item">
                     <span class="social-proof-icon">📱</span>
                     <div class="social-proof-text">
-                        <strong>90,000</strong>
-                        <span>TikTok Followers</span>
+                        <strong>90K Followers</strong>
                     </div>
                 </div>
             </div>
             
             <div class="cta-block">
                 <button class="btn primary book-btn" id="heroBookBtn">Book Your £25 Consultation</button>
-                <button class="btn secondary enquiry-btn" id="heroEnquiryBtn">Send an Enquiry</button>
+                <a href="pricing.html" class="btn secondary">View Pricing</a>
             </div>
+        </div>
+        
+        <div class="hero-image-visible">
+            <img src="assets/matt-headshot-online-singing-lessons-copy.jpg" alt="Matt Thompson - Celebrity Vocal Coach">
         </div>
     </div>
 </header>
@@ -283,9 +303,6 @@
                 <li>Online lessons from my mobile studio worldwide</li>
                 <li>Personalised coaching tailored to your goals</li>
             </ul>
-            <div class="cta-block" style="margin-top: 2rem;">
-                <button class="btn primary book-btn">View Pricing</button>
-            </div>
         </div>
         <div class="credentials-image">
             <img src="assets/matt-teaching-group-singing-Lessons.jpg" alt="Matt Thompson teaching group singing lessons">
