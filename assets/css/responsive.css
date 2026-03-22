@@ -122,3 +122,52 @@
         font-size: 0.85rem;
     }
 }
+/* Testimonials Page Headshot */
+.instructor-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.headshot-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.headshot-performance {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.intro-text {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .headshot-performance {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .instructor-intro {
+        margin-bottom: 2rem;
+        padding: 1rem 0;
+    }
+    
+    .headshot-performance {
+        width: 120px;
+        height: 120px;
+        border-width: 3px;
+    }
+}
