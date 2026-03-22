@@ -14,7 +14,14 @@
 <nav>
     <div class="nav-container">
         <a href="index.html" class="logo">Sing The Easy Way</a>
-        <ul>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul id="mainNav">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Matt</a></li>
             <li><a href="lessons.html">Lessons</a></li>
@@ -22,9 +29,6 @@
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div id="theme-toggle" class="theme-toggle">
-            <div class="toggle-handle"></div>
-        </div>
     </div>
 </nav>
 
@@ -128,8 +132,8 @@
         <h2>Book Your First Lesson Today</h2>
         <p>Flexible options to suit your schedule and goals.</p>
         <div class="cta-block">
-            <button class="btn primary">View Pricing</button>
-            <button class="btn secondary">Send an Enquiry</button>
+            <button class="btn primary book-btn">View Pricing</button>
+            <button class="btn secondary enquiry-btn">Send an Enquiry</button>
         </div>
     </div>
 </section>
@@ -159,22 +163,93 @@
             </div>
             <div>
                 <h3>Contact</h3>
-                <p><strong>Mobile:</strong> </p>
-                <p><strong>Email:</strong> </p>
-                <button class="btn secondary">Send Enquiry</button>
+                <p><strong>Email:</strong> matt@singtheeasyway.com</p>
+                <button class="btn secondary enquiry-btn">Send Enquiry</button>
             </div>
         </div>
     </div>
 </footer>
 
 <div class="floating-cta">
-    <a href="#book" class="btn primary">Book Lesson</a>
-    <a href="#enquire" class="btn secondary">Enquire</a>
+    <button class="btn primary book-btn" id="floatBookBtn">Book Lesson</button>
+    <button class="btn secondary enquiry-btn" id="floatEnquiryBtn">Enquire</button>
 </div>
 
-<script src="assets/js/theme-toggle.js"></script>
-<script src="assets/js/cta.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
+<script src="https://form.jotform.com/static/feedback2.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var widget = new SimplybookWidget({
+        "widget_type": "button",
+        "url": "https://singtheeasyway.simplybook.me",
+        "theme": "default",
+        "theme_settings": {
+            "timeline_hide_unavailable": "1",
+            "hide_past_days": "0",
+            "timeline_show_end_time": "0",
+            "timeline_modern_display": "as_slots",
+            "sb_base_color": "#ff6b35",
+            "display_item_mode": "block",
+            "booking_nav_bg_color": "#ff6b35",
+            "body_bg_color": "#f2f2f2",
+            "dark_font_color": "#474747",
+            "light_font_color": "#f5fcff",
+            "btn_color_1": "#ff6b35",
+            "sb_company_label_color": "#552f34",
+            "hide_img_mode": "1",
+            "show_sidebar": "1"
+        },
+        "timeline": "modern",
+        "datepicker": "top_calendar",
+        "is_rtl": false,
+        "app_config": {
+            "clear_session": 0,
+            "allow_switch_to_ada": 0,
+            "predefined": []
+        }
+    });
+
+    var jotformFeedback = new JotformFeedback({
+        formId: '51562311137345',
+        base: 'https://form.jotform.com/',
+        windowTitle: 'Send an Enquiry',
+        background: '#ff6b35',
+        fontColor: '#FFFFFF',
+        type: '1',
+        height: 500,
+        width: 700,
+        openOnLoad: false
+    });
+
+    document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+        document.getElementById('mainNav').classList.toggle('active');
+        this.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (widget && typeof widget.open === 'function') {
+                widget.open();
+            } else {
+                window.open('https://singtheeasyway.simplybook.me', '_blank');
+            }
+        });
+    });
+
+    document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (jotformFeedback && typeof jotformFeedback.open === 'function') {
+                jotformFeedback.open();
+            } else {
+                window.open('https://form.jotform.com/51562311137345', '_blank');
+            }
+        });
+    });
+});
+</script>
 
 </body>
 </html>
