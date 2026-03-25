@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Sing The Easy Way</title>
-    <meta name="description" content="Get in touch with Matt Thompson for online singing lessons. Book a consultation or send an enquiry." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Online Singing Lessons | Sing The Easy Way</title>
+    <meta name="description" content="Get in touch with Matt Thompson for online singing lessons. Book a consultation or send an enquiry about virtual vocal coaching.">
+    <meta name="keywords" content="contact singing teacher, book singing lessons, vocal coach contact, online singing lessons enquiry">
+    <meta name="author" content="Matt Thompson">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact | Online Singing Lessons">
+    <meta property="og:description" content="Get in touch with Matt Thompson for online singing lessons.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://singtheeasyway.com/contact.html">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://singtheeasyway.com/contact.html">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+<body>
 
-<body class="dark-mode">
-
+<!-- Navigation -->
 <nav>
     <div class="nav-container">
         <a href="index.html" class="logo">Sing The Easy Way</a>
@@ -32,6 +46,7 @@
     </div>
 </nav>
 
+<!-- Page Header -->
 <header class="page-header">
     <div class="hero-bg"></div>
     <div class="page-header-content">
@@ -40,69 +55,94 @@
     </div>
 </header>
 
+<!-- Main Content -->
 <main class="page-content">
     <div class="container">
         <div class="contact-grid">
             <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p>Ready to start your vocal journey? Get in touch to book a consultation or ask any questions.</p>
+                <span class="badge">Contact Information</span>
+                <h2>Ready to Start Your Vocal Journey?</h2>
+                <p>Get in touch to book a consultation or ask any questions about online singing lessons.</p>
                 
                 <div class="contact-method">
-                    <h3>Email</h3>
-                    <p>matt@singtheeasyway.com</p>
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:matt@singtheeasyway.com">matt@singtheeasyway.com</a></p>
                 </div>
                 
                 <div class="contact-method">
-                    <h3>Lesson Times</h3>
-                    <p>Available around the clock to suit your schedule.</p>
+                    <h3>📱 Phone</h3>
+                    <p><a href="tel:+447792511393">+44 7792 511393</a></p>
                 </div>
                 
                 <div class="contact-method">
-                    <h3>Location</h3>
-                    <p>Teaching online worldwide from my mobile studio.</p>
+                    <h3>🕐 Lesson Times</h3>
+                    <p>Available around the clock to suit your schedule. Lessons via FaceTime, WhatsApp, or Microsoft Teams.</p>
                 </div>
                 
-                <div class="cta-block" style="margin-top: var(--space-lg);">
-                    <button class="btn primary book-btn">Book a Consultation</button>
-                    <button class="btn secondary enquiry-btn">Send an Enquiry</button>
+                <div class="contact-method">
+                    <h3>📍 Location</h3>
+                    <p>Teaching online worldwide from my mobile studio. No matter where you are, I can help you improve your singing.</p>
+                </div>
+                
+                <div class="cta-block" style="justify-content: flex-start; margin-top: var(--space-lg);">
+                    <button class="btn primary book-btn" data-booking>Book a Consultation</button>
+                    <button class="btn secondary enquiry-btn" data-enquiry>Send an Enquiry</button>
                 </div>
             </div>
             
             <div class="contact-form-wrapper">
-                <div class="card-sharp">
-                    <h3>Quick Enquiry</h3>
-                    <p>Fill out the form and I'll get back to you within 24 hours.</p>
-                    <button class="btn primary enquiry-btn" style="width: 100%; margin-top: 1rem;">Open Enquiry Form</button>
+                <h3>Quick Enquiry</h3>
+                <p>Fill out the form and I'll get back to you within 24 hours.</p>
+                
+                <div style="margin-top: var(--space-md);">
+                    <div style="margin-bottom: var(--space-md);">
+                        <label style="display: block; margin-bottom: var(--space-xs); color: var(--text-secondary);">Name</label>
+                        <input type="text" placeholder="Your name" style="width: 100%; padding: 12px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-primary);">
+                    </div>
+                    <div style="margin-bottom: var(--space-md);">
+                        <label style="display: block; margin-bottom: var(--space-xs); color: var(--text-secondary);">Email</label>
+                        <input type="email" placeholder="your@email.com" style="width: 100%; padding: 12px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-primary);">
+                    </div>
+                    <div style="margin-bottom: var(--space-md);">
+                        <label style="display: block; margin-bottom: var(--space-xs); color: var(--text-secondary);">Message</label>
+                        <textarea placeholder="Tell me about your singing goals..." rows="4" style="width: 100%; padding: 12px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-primary); resize: vertical;"></textarea>
+                    </div>
+                    <button class="btn primary enquiry-btn" data-enquiry style="width: 100%;">Open Enquiry Form</button>
                 </div>
+                
+                <p style="font-size: 0.85rem; margin-top: var(--space-md);">Or use the full enquiry form for more detailed questions.</p>
             </div>
         </div>
     </div>
 </main>
 
-<section class="section-angled fade-in">
-    <div class="container text-center">
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
         <span class="badge">Ready to Start?</span>
         <h2>Begin Your Vocal Journey Today</h2>
         <p>Book your consultation or send an enquiry.</p>
         <div class="cta-block">
-            <button class="btn primary book-btn">Book Your Consultation</button>
-            <button class="btn secondary enquiry-btn">Send an Enquiry</button>
+            <button class="btn primary book-btn" data-booking>Book Your Consultation</button>
+            <button class="btn secondary enquiry-btn" data-enquiry>Send an Enquiry</button>
         </div>
     </div>
 </section>
 
+<!-- Footer -->
 <footer>
     <div class="container">
         <div class="footer-grid">
             <div>
                 <div class="footer-logo">Sing The Easy Way</div>
-                <p>Professional online vocal coaching for all levels.</p>
+                <p>Professional online singing lessons with celebrity vocal coach Matt Thompson.</p>
+                <p class="trading-as">Previously trading as Arpeggio Music</p>
                 <div class="socials">
-                    <span>IG</span>
-                    <span>TT</span>
-                    <span>YT</span>
+                    <a href="https://www.instagram.com/singtheeasyway" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/@mattsjourneysofar" target="_blank" rel="noopener">TikTok</a>
                 </div>
             </div>
+            
             <div>
                 <h3>Quick Links</h3>
                 <ul>
@@ -114,6 +154,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+            
             <div>
                 <h3>Legal</h3>
                 <ul>
@@ -122,20 +163,34 @@
                     <li><a href="sitemap.xml">Sitemap</a></li>
                 </ul>
             </div>
+            
+            <div class="footer-contact">
+                <h3>Get in Touch</h3>
+                <p><a href="tel:+447792511393">+44 7792 511393</a></p>
+                <p><a href="mailto:matt@singtheeasyway.com">matt@singtheeasyway.com</a></p>
+                <button class="btn primary enquiry-btn" data-enquiry style="margin-top: var(--space-sm);">Send Enquiry</button>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sing The Easy Way. All rights reserved.</p>
+            <p>Celebrity Vocal Coach Matt Thompson</p>
         </div>
     </div>
 </footer>
 
+<!-- Floating CTA -->
 <div class="floating-cta">
-    <button class="btn primary book-btn" id="floatBookBtn">Book Lesson</button>
-    <button class="btn secondary enquiry-btn" id="floatEnquiryBtn">Enquire</button>
+    <button class="btn primary book-btn" data-booking>Book Lesson</button>
+    <button class="btn secondary enquiry-btn" data-enquiry>Enquire</button>
 </div>
 
-<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
-<script src="https://form.jotform.com/static/feedback2.js"></script>
+<!-- Scripts -->
+<script src="assets/js/main.js"></script>
 
+<!-- SimplyBook.me Widget -->
+<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
     var widget = new SimplybookWidget({
         "widget_type": "button",
         "url": "https://singtheeasyway.simplybook.me",
@@ -165,7 +220,11 @@ document.addEventListener('DOMContentLoaded', function() {
             "predefined": []
         }
     });
+</script>
 
+<!-- Jotform Widget -->
+<script src="https://form.jotform.com/static/feedback2.js"></script>
+<script>
     var jotformFeedback = new JotformFeedback({
         formId: '51562311137345',
         base: 'https://form.jotform.com/',
@@ -177,13 +236,12 @@ document.addEventListener('DOMContentLoaded', function() {
         width: 700,
         openOnLoad: false
     });
+</script>
 
-    document.getElementById('mobileMenuToggle').addEventListener('click', function() {
-        document.getElementById('mainNav').classList.toggle('active');
-        this.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.book-btn, #floatBookBtn').forEach(function(btn) {
+<!-- Button Click Handlers -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('[data-booking]').forEach(function(btn) {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             if (widget && typeof widget.open === 'function') {
@@ -193,8 +251,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    document.querySelectorAll('.enquiry-btn, #floatEnquiryBtn').forEach(function(btn) {
+    
+    document.querySelectorAll('[data-enquiry]').forEach(function(btn) {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             if (jotformFeedback && typeof jotformFeedback.open === 'function') {
